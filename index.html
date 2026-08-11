@@ -183,15 +183,30 @@
       line-height: 1.62;
     }
 
-    .cv-link {
-      margin-top: 24px;
-      display: inline-block;
-
+    .cv-options {
+      margin-top: 23px;
       font-size: 1.20rem;
       font-weight: 700;
+      white-space: nowrap;
+    }
 
-      padding-bottom: 2px;
-      border-bottom: 1.5px solid currentColor;
+    .cv-label {
+      color: var(--ink);
+    }
+
+    .cv-options a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    .cv-options a:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .cv-symbol {
+      color: var(--muted);
+      font-weight: 400;
     }
 
     /* RIGHT CONTENT COLUMN */
@@ -471,9 +486,14 @@ footer {
   </a>
 </div>
 
-<a class="cv-link" href="cv.html" target="_blank" rel="noreferrer">
-  CV
-</a>
+<div class="cv-options">
+  <span class="cv-label">CV</span>
+  <span class="cv-symbol">(</span>
+  <a href="Chinese_cv.html" target="_blank" rel="noreferrer">中</a>
+  <span class="cv-symbol">/</span>
+  <a href="cv.html" target="_blank" rel="noreferrer">En</a>
+  <span class="cv-symbol">)</span>
+</div>
 
 </div>
 </aside><div class="top-content"><section class="section" id="biography">
