@@ -1,151 +1,1140 @@
 <!doctype html>
 <html lang="zh-CN">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>虞捷 | 简历</title>
-<meta name="description" content="虞捷的中文学术简历。">
-<style>
-:root{--ink:#202428;--muted:#66707a;--blue:#21628f;--rule:#dfe4e8;--paper:#fff;--screen:#f3f5f7}
-*{box-sizing:border-box} html{scroll-behavior:smooth}
-body{margin:0;background:var(--screen);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Noto Sans CJK SC","Segoe UI",sans-serif;font-size:10.5pt;line-height:1.62}
-a{color:var(--blue);text-decoration:none} a:hover{text-decoration:underline;text-underline-offset:2px}
-.toolbar{position:sticky;top:0;z-index:20;display:flex;justify-content:flex-end;gap:10px;width:min(calc(100% - 28px),210mm);margin:12px auto 0}
-.toolbar button,.toolbar a{border:1px solid #cfd6dc;border-radius:5px;background:#fff;color:#2b333a;padding:7px 12px;font:inherit;font-size:9.2pt;cursor:pointer}
-.toolbar button:hover,.toolbar a:hover{border-color:#9faab3;text-decoration:none}
-.cv{width:min(calc(100% - 28px),210mm);min-height:297mm;margin:12px auto 28px;padding:14mm 16mm;background:var(--paper);box-shadow:0 4px 18px rgba(24,39,52,.08)}
-.header{padding-bottom:7mm;border-bottom:1.2px solid #bfc7ce}
-.name-row{display:flex;align-items:baseline;justify-content:space-between;gap:20px}
-.name{margin:0;font-family:"Songti SC","STSong","Noto Serif CJK SC",serif;font-size:24pt;line-height:1;font-weight:700}
-.application{color:var(--muted);font-size:10pt;text-align:right}
-.personal-line{margin-top:7px;display:flex;flex-wrap:wrap;gap:4px 10px;font-size:9.5pt}
-.personal-line span:not(:last-child)::after{content:"·";color:#9aa2a9;margin-left:10px}
-.summary-grid{margin-top:7px;display:grid;grid-template-columns:1fr;gap:2px}.summary-grid strong{font-weight:700}
-.section{margin-top:7mm}
-.section-title{margin:0 0 3.5mm;padding-bottom:1.4mm;border-bottom:1px solid var(--rule);font-family:"Songti SC","STSong","Noto Serif CJK SC",serif;font-size:14pt;line-height:1.2;font-weight:700;break-after:avoid}
-.entry{display:grid;grid-template-columns:31mm minmax(0,1fr);gap:5mm;margin-top:3.8mm;break-inside:avoid;page-break-inside:avoid}.entry:first-of-type{margin-top:0}
-.date{color:var(--muted);font-size:9.2pt;padding-top:.5mm;white-space:nowrap}
-.entry-title{margin:0;font-size:10.7pt;line-height:1.45;font-weight:700}.entry-subtitle{margin-top:1px;color:#343b41;font-weight:600}.secondary{margin-top:1px;color:var(--muted);font-size:9.3pt}
-.bullets{margin:2mm 0 0;padding-left:5mm}.bullets li+li{margin-top:1.25mm}
-.output-list{margin:0;padding-left:5mm}.output-list li+li{margin-top:1.8mm}
-.course-row+.course-row{margin-top:2mm}.label{font-weight:700;color:#30363b}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:7mm}
-@page{size:A4;margin:0}
-@media print{body{background:#fff;font-size:10.1pt}.toolbar{display:none!important}.cv{width:210mm;min-height:297mm;margin:0;padding:14mm 16mm;box-shadow:none}a{color:inherit;text-decoration:none}.section-title,.entry,.two-col{break-inside:avoid;page-break-inside:avoid}}
-@media(max-width:720px){body{font-size:10pt}.cv{padding:24px 22px}.name-row{display:block}.application{margin-top:6px;text-align:left}.entry{grid-template-columns:1fr;gap:2px}.date{white-space:normal}.two-col{grid-template-columns:1fr}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>虞捷 | 简历</title>
+  <meta name="description" content="虞捷的中文学术简历。">
+
+  <style>
+    :root {
+      --ink: #202428;
+      --muted: #66707a;
+      --blue: #21628f;
+      --rule: #dfe4e8;
+      --paper: #ffffff;
+      --screen: #f3f5f7;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--screen);
+      color: var(--ink);
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "PingFang SC",
+        "Microsoft YaHei",
+        "Noto Sans CJK SC",
+        "Segoe UI",
+        sans-serif;
+      font-size: 10.5pt;
+      line-height: 1.58;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    /* =========================
+       Toolbar
+       ========================= */
+
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+
+      width: min(calc(100% - 28px), 210mm);
+      margin: 12px auto 0;
+    }
+
+    .toolbar button,
+    .toolbar a {
+      border: 1px solid #cfd6dc;
+      border-radius: 5px;
+      background: #ffffff;
+      color: #2b333a;
+
+      padding: 7px 12px;
+
+      font: inherit;
+      font-size: 9.2pt;
+
+      cursor: pointer;
+    }
+
+    .toolbar button:hover,
+    .toolbar a:hover {
+      border-color: #9faab3;
+      text-decoration: none;
+    }
+
+    /* =========================
+       Main CV
+       ========================= */
+
+    .cv {
+      width: min(calc(100% - 28px), 210mm);
+      min-height: 297mm;
+
+      margin: 12px auto 28px;
+      padding: 14mm 16mm;
+
+      background: var(--paper);
+
+      box-shadow:
+        0 4px 18px rgba(24, 39, 52, 0.08);
+    }
+
+    /* =========================
+       Header
+       ========================= */
+
+    .header {
+      padding-bottom: 6mm;
+      border-bottom: 1.2px solid #bfc7ce;
+    }
+
+    .name-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .name {
+      margin: 0;
+
+      font-family:
+        "Songti SC",
+        "STSong",
+        "Noto Serif CJK SC",
+        serif;
+
+      font-size: 24pt;
+      line-height: 1;
+      font-weight: 700;
+    }
+
+    .application {
+      color: var(--muted);
+      font-size: 10pt;
+      text-align: right;
+    }
+
+    .personal-line {
+      margin-top: 7px;
+
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px 10px;
+
+      font-size: 9.5pt;
+    }
+
+    .personal-line span:not(:last-child)::after {
+      content: "·";
+      color: #9aa2a9;
+      margin-left: 10px;
+    }
+
+    .summary-grid {
+      margin-top: 7px;
+
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2px;
+    }
+
+    .summary-grid strong {
+      font-weight: 700;
+    }
+
+    /* =========================
+       Sections
+       ========================= */
+
+    .section {
+      margin-top: 6mm;
+    }
+
+    .section-title {
+      margin: 0 0 3mm;
+      padding-bottom: 1.2mm;
+
+      border-bottom: 1px solid var(--rule);
+
+      font-family:
+        "Songti SC",
+        "STSong",
+        "Noto Serif CJK SC",
+        serif;
+
+      font-size: 14pt;
+      line-height: 1.2;
+      font-weight: 700;
+
+      break-after: avoid;
+      page-break-after: avoid;
+    }
+
+    /* =========================
+       Timeline Entries
+       ========================= */
+
+    .entry {
+      display: grid;
+      grid-template-columns: 31mm minmax(0, 1fr);
+      gap: 5mm;
+
+      margin-top: 3.4mm;
+
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .entry:first-of-type {
+      margin-top: 0;
+    }
+
+    .date {
+      color: var(--muted);
+      font-size: 9.2pt;
+      padding-top: 0.5mm;
+      white-space: nowrap;
+    }
+
+    .entry-title {
+      margin: 0;
+
+      font-size: 10.7pt;
+      line-height: 1.42;
+      font-weight: 700;
+    }
+
+    .entry-subtitle {
+      margin-top: 1px;
+      color: #343b41;
+      font-weight: 600;
+    }
+
+    .secondary {
+      margin-top: 1px;
+      color: var(--muted);
+      font-size: 9.3pt;
+    }
+
+    /* =========================
+       Lists
+       ========================= */
+
+    .bullets {
+      margin: 1.8mm 0 0;
+      padding-left: 5mm;
+    }
+
+    .bullets li + li {
+      margin-top: 1mm;
+    }
+
+    .output-list {
+      margin: 0;
+      padding-left: 5mm;
+    }
+
+    .output-list li + li {
+      margin-top: 1.5mm;
+    }
+
+    .nested-list {
+      margin-top: 1.2mm;
+      padding-left: 5mm;
+    }
+
+    .nested-list li + li {
+      margin-top: 0.8mm;
+    }
+
+    /* =========================
+       Courses / Skills
+       ========================= */
+
+    .course-row + .course-row {
+      margin-top: 1.7mm;
+    }
+
+    .label {
+      font-weight: 700;
+      color: #30363b;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 7mm;
+    }
+
+    /* =========================
+       PRINT SETTINGS
+       ========================= */
+
+    @page {
+      size: A4;
+      margin: 9mm 12mm;
+    }
+
+    @media print {
+
+      html,
+      body {
+        background: #ffffff;
+      }
+
+      body {
+        margin: 0;
+
+        font-size: 9.35pt;
+        line-height: 1.38;
+
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .toolbar {
+        display: none !important;
+      }
+
+      .cv {
+        width: auto;
+        min-height: 0;
+
+        margin: 0;
+        padding: 0;
+
+        background: #ffffff;
+        box-shadow: none;
+      }
+
+      .header {
+        padding-bottom: 4.2mm;
+      }
+
+      .name {
+        font-size: 21pt;
+      }
+
+      .personal-line {
+        margin-top: 5px;
+        font-size: 8.8pt;
+      }
+
+      .summary-grid {
+        margin-top: 5px;
+      }
+
+      .section {
+        margin-top: 4.2mm;
+      }
+
+      .section-title {
+        margin-bottom: 2mm;
+        padding-bottom: 0.8mm;
+
+        font-size: 12.4pt;
+
+        break-after: avoid;
+        page-break-after: avoid;
+      }
+
+      .entry {
+        grid-template-columns: 27mm minmax(0, 1fr);
+        gap: 3.5mm;
+
+        margin-top: 2.2mm;
+
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      .date {
+        font-size: 8.5pt;
+      }
+
+      .entry-title {
+        font-size: 9.55pt;
+        line-height: 1.34;
+      }
+
+      .secondary {
+        font-size: 8.5pt;
+      }
+
+      .bullets {
+        margin-top: 1mm;
+        padding-left: 4.2mm;
+      }
+
+      .bullets li + li {
+        margin-top: 0.55mm;
+      }
+
+      .output-list {
+        padding-left: 4.2mm;
+      }
+
+      .output-list li + li {
+        margin-top: 0.8mm;
+      }
+
+      .nested-list {
+        margin-top: 0.6mm;
+        padding-left: 4.2mm;
+      }
+
+      .nested-list li + li {
+        margin-top: 0.35mm;
+      }
+
+      .course-row + .course-row {
+        margin-top: 0.9mm;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .section-title,
+      .entry,
+      .two-col {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+    }
+
+    /* =========================
+       Mobile
+       ========================= */
+
+    @media (max-width: 720px) {
+
+      body {
+        font-size: 10pt;
+      }
+
+      .cv {
+        padding: 24px 22px;
+      }
+
+      .name-row {
+        display: block;
+      }
+
+      .application {
+        margin-top: 6px;
+        text-align: left;
+      }
+
+      .entry {
+        grid-template-columns: 1fr;
+        gap: 2px;
+      }
+
+      .date {
+        white-space: normal;
+      }
+
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
+
+
 <body>
-<div class="toolbar">
-  <a href="https://jieyu-09.github.io/" target="_blank" rel="noreferrer">个人主页</a>
-  <a href="English_cv.html" target="_blank" rel="noreferrer">English CV</a>
-  <button onclick="window.print()">打印 / 保存为 PDF</button>
-</div>
-<main class="cv">
-<header class="header">
-  <div class="name-row"><h1 class="name">虞捷</h1><div ></div>
-  <div class="personal-line">
-    <span>男</span><span>2001.09.14</span><span>浙江</span>
-    <span><a href="tel:+8615372325635">15372325635</a></span>
-    <span><a href="mailto:24125828@bjtu.edu.cn">24125828@bjtu.edu.cn</a></span>
-    <span><a href="https://jieyu-09.github.io/" target="_blank" rel="noreferrer">jieyu-09.github.io</a></span>
+
+  <!-- =========================
+       Toolbar
+       ========================= -->
+
+  <div class="toolbar">
+
+    <a
+      href="https://jieyu-09.github.io/"
+      target="_blank"
+      rel="noreferrer">
+      个人主页
+    </a>
+
+    <a
+      href="English_cv.html"
+      target="_blank"
+      rel="noreferrer">
+      English CV
+    </a>
+
+    <button onclick="window.print()">
+      打印 / 保存为 PDF
+    </button>
+
   </div>
-  <div class="summary-grid">
-    <div><strong>当前单位：</strong><a href="https://en.trans.bjtu.edu.cn/" target="_blank" rel="noreferrer">北京交通大学交通运输学院</a> ｜ <strong>硕士导师：</strong><a href="https://trans.bjtu.edu.cn/faculty/9gxvq7Kopp7JMowy.html" target="_blank" rel="noreferrer">王永兴</a> 副教授</div>
-    <div><strong>研究方向：</strong>公共交通运营调度；模块化自动驾驶电动公交；出行方式、需求预测；随机优化</div>
-  </div>
-</header>
-<section class="section"><h2 class="section-title">教育背景</h2>
-  <div class="entry"><div class="date">2024.09 – 至今</div><div><div class="entry-title">北京交通大学</div><div class="entry-subtitle">交通运输学院 ｜ 交通运输 ｜ 硕士研究生</div><div class="secondary">GPA：3.36 / 4.00</div></div></div>
-  <div class="entry"><div class="date">2020.09 – 2024.06</div><div><div class="entry-title">南京航空航天大学金城学院</div><div class="entry-subtitle">交通运输（民航运输工程）｜ 本科</div><div class="secondary">GPA：3.70 / 4.00</div></div></div>
-</section>
-<section class="section"><h2 class="section-title">研究兴趣与博士阶段规划</h2>
-<li>模块化自动驾驶电动公交（Modular autonomous electric bus, MAEB）系统性研究：从车辆调度与能源补给优化进一步拓展至需求预测、不确定性建模和实时运营决策。</li>
 
-<li>围绕同一研究主线连续完成三篇研究型论文，形成从文献研读、问题提出、机制设计、建模求解到论文投稿的完整训练。</li>
 
-<li>研究兴趣集中于公共交通系统中的需求响应、车辆调度与能源补给协同优化，关注客流需求、运力供给、电池能源与车辆资源配置之间的结构性矛盾。</li>
+  <!-- =========================
+       CV
+       ========================= -->
 
-<li>博士阶段希望在现有 MAEB 运营优化研究基础上，进一步研究：</li>
-    &nbsp;&nbsp;&nbsp;&nbsp;面向真实运行数据的客流需求与交通状态预测/估计；<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;面向需求与运行环境不确定性的 stochastic / robust optimization；<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;面向实时运营的 prediction–optimization integration 与动态决策。<br>
-</ul>
-</section>
-<section class="section"><h2 class="section-title">研究成果（截至 2026.08）</h2>
-<ul class="output-list">
-<li><strong>第一作者：</strong>Joint optimization of charger deployment and vehicle scheduling for modular autonomous electric buses under opportunity charging. <em>Journal of Energy Storage</em>，二审中。</li>
-<li><strong>第一作者：</strong>Integrating modular autonomous electric buses into tidal urban mobility: Joint scheduling optimization with detachment-return operations. <em>Transportation Research Part E</em>，送审中。</li>
-<li><strong>第二作者（导师一作）：</strong>模块化自动驾驶电动公交脱节返程调度优化. 《华南理工大学学报（自然科学版）》，送审中。</li>
-<li><strong>专利：</strong>围绕“模块化自动驾驶电动公交脱节返程调度方法”已取得“专利受理通知书”。</li>
-</ul>
-</section>
-<section class="section"><h2 class="section-title">科研经历</h2>
-  <div class="entry"><div class="date">2024.10 – 至今</div><div>
-    <div class="entry-title">Joint optimization of charger deployment and vehicle scheduling for modular autonomous electric buses under opportunity charging</div>
-    <div class="secondary">第一作者</div>
-    <ul class="bullets">
-      <li><strong>研究问题：</strong>针对模块化自动驾驶电动公交在机会充电场景下面临的充电时间窗有限、车辆调度与充电资源部署高度耦合等问题，构建充电桩部署与车辆调度联合优化框架。</li>
-      <li><strong>核心思路：</strong>提出解耦式机会充电机制，在不影响乘客服务时间的前提下，利用模块化车辆可解耦、耦合特征动态创造充电时间窗。</li>
-      <li><strong>研究训练：</strong>完成英文论文写作、模型修订与国际期刊投稿流程；该工作曾投稿至 <em>Transportation Research Part D</em> 并进入返修阶段，完成一轮系统修订后虽未最终录用，但基于评审意见进一步完善模型设定、实验设计与论文表述，后转投 <em>Journal of Energy Storage</em>，目前处于二审阶段。</li>
-    </ul>
-  </div></div>
-  <div class="entry"><div class="date">2025.09 – 至今</div><div>
-    <div class="entry-title">Integrating modular autonomous electric buses into tidal urban mobility: Joint scheduling optimization with detachment-return operations</div>
-    <div class="secondary">第一作者</div>
-    <ul class="bullets">
-      <li><strong>研究问题：</strong>从潮汐通勤客流与车辆资源时空错配出发，关注固定班次中“高峰滞留”与“局部低载”并存的运营矛盾，并联合优化基础设施配置。</li>
-      <li><strong>机制创新：</strong>提出 detachment-return operations（脱节返程机制），使车辆模块能够在中途站点释放冗余运力，并转化为对向区间返程服务，实现站点级车辆资源再分配。</li>
-      <li><strong>模型：</strong>构建包含初始编组、中途脱节、返程服务、后续任务衔接、基础设施配置和乘客滞留惩罚的联合调度优化模型。</li>
-      <li><strong>阶段成果：</strong>形成英文论文一篇，以第一作者投稿 <em>Transportation Research Part E</em>，外审中（under review）。</li>
-    </ul>
-  </div></div>
-  <div class="entry"><div class="date">2026.03 – 至今</div><div>
-    <div class="entry-title">模块化自动驾驶电动公交脱节返程调度优化</div><div class="secondary">第二作者（导师一作）</div>
-    <ul class="bullets">
-      <li>面向潮汐通勤场景下固定班次供给不足与车辆低载并存的问题，构建模块化自动驾驶电动公交脱节返程调度优化模型。</li>
-      <li>完成中文 EI 论文写作与模型表达优化，围绕固定班次、动态编组、中途脱节、对向返程服务、模块任务衔接和乘客滞留等核心约束进行系统梳理。突出其在站点级车辆资源再分配和客流—运力匹配中的应用价值。</li>
-      <li>论文《模块化自动驾驶电动公交脱节返程调度优化》投稿至《华南理工大学学报（自然科学版）》，外审中（under review）。</li>
-    </ul>
-  </div></div>
-  <div class="entry"><div class="date">2026.06 – 至今</div><div>
-    <div class="entry-title">模块化自动驾驶电动公交脱节返程调度方法专利</div><div class="secondary">第一作者</div>
-    <ul class="bullets">
-      <li>将模块化自动驾驶电动公交脱节返程调度机制转化为专利技术方案，围绕“运行中释放冗余模块—对向返程服务—后续任务衔接”的完整流程进行技术表达。</li>
-      <li>梳理专利技术问题、现有技术不足、核心创新点及应用场景，突出该方法在潮汐通勤公交走廊中实现站点级运力再配置的技术优势。</li>
-      <li>绘制和完善方法流程图、原理框图及模块调度衔接逻辑，明确固定班次、候选脱节站点、返程服务、终端资源池和乘客滞留之间的关系。</li>
-      <li>专利交底书已完成，已取得“专利受理通知书”。</li>
-    </ul>
-  </div></div>
-</section>
-<section class="section"><h2 class="section-title">海外访学经历</h2>
-  <div class="entry"><div class="date">2025.03 – 2025.04</div><div>
-    <div class="entry-title"><a href="https://www.oslomet.no/en/">Oslo Metropolitan University (OsloMet)</a> ｜ The COMet Project</div>
-    <ul class="bullets">
-      <li><strong>项目背景：</strong>The COMet Project，由 Norwegian Directorate for Higher Education and Skills (HK-dir.) 资助；联系导师：<a href="https://www.oslomet.no/en/about/employee/chaorulu/">Chaoru Lu</a></li>
-      <li><strong>访学内容：</strong>访学期间积极开展学术交流，每周参加 Seminar，围绕硕士阶段科研进展进行英文汇报与交流，提升了国际学术沟通、研究表达和跨文化合作能力。</li>
-    </ul>
-  </div></div>
-</section>
-<section class="section"><h2 class="section-title">学术交流</h2>
-<ul class="output-list">
-<li>东南大学交通学院 JOIN 学术论坛：“通过模块化车辆缓解公交串车”相关主题学习与交流，2024.09.30；该经历促成对模块化自动驾驶电动公交商业部署与研究潜力的系统关注。</li>
-<li>2026 交通科技与产业创新发展大会（天津），墙报汇报，2026.06；围绕模块化自动驾驶电动公交充电调度优化相关研究进行展示与交流。</li>
-</ul>
-</section>
-<section class="section"><h2 class="section-title">课程与技能</h2>
-<div class="course-row"><span class="label">主修课程：</span>综合交通建模、交通枢纽规划与设计、交通规划理论与方法、道路交通管理与控制、深度学习、模型与算法、随机方法及应用、最优估计与数据融合方法、运筹学。</div>
-<div class="course-row"><span class="label">方法基础：</span>交通运输建模、混合整数规划、机器学习。</div>
-<div class="course-row"><span class="label">编程与工具：</span>Python、MATLAB、Gurobi、Navicat。</div>
-<div class="course-row">具备混合整数规划模型构建、算法实现、实验数据处理与结果可视化经验。</div>
-<div class="course-row"><span class="label">语言能力：</span>CET6 534；IELTS 6.5 (overall)。</div>
-</section>
+  <main class="cv">
 
-<section class="section"><h2 class="section-title">博士阶段拟开展研究</h2>
-<ul class="output-list">
-<li>由确定性公交调度模型拓展至需求不确定，探索随机优化、鲁棒优化与情景规划在公共交通运营中的应用。</li>
-<li>结合模块化车辆动态编组、充电控制等特征，研究面向实时决策的方法。</li>
-<li>加强真实运营数据、仿真平台与优化算法之间的衔接，提高模型在复杂交通系统中的可解释性、可扩展性和应用价值。</li>
-</ul>
-</main>
+
+    <!-- =========================
+         Header
+         ========================= -->
+
+    <header class="header">
+
+      <div class="name-row">
+        <h1 class="name">虞捷</h1>
+        <div></div>
+      </div>
+
+      <div class="personal-line">
+
+        <span>男</span>
+
+        <span>2001.09.14</span>
+
+        <span>浙江</span>
+
+        <span>
+          <a href="tel:+8615372325635">
+            15372325635
+          </a>
+        </span>
+
+        <span>
+          <a href="mailto:24125828@bjtu.edu.cn">
+            24125828@bjtu.edu.cn
+          </a>
+        </span>
+
+        <span>
+          <a
+            href="https://jieyu-09.github.io/"
+            target="_blank"
+            rel="noreferrer">
+            jieyu-09.github.io
+          </a>
+        </span>
+
+      </div>
+
+
+      <div class="summary-grid">
+
+        <div>
+          <strong>当前单位：</strong>
+          <a
+            href="https://en.trans.bjtu.edu.cn/"
+            target="_blank"
+            rel="noreferrer">
+            北京交通大学交通运输学院
+          </a>
+          ｜
+          <strong>硕士导师：</strong>
+          <a
+            href="https://trans.bjtu.edu.cn/faculty/9gxvq7Kopp7JMowy.html"
+            target="_blank"
+            rel="noreferrer">
+            王永兴
+          </a>
+          副教授
+        </div>
+
+        <div>
+          <strong>研究方向：</strong>
+          公共交通运营调度；模块化自动驾驶电动公交；
+          出行方式与需求预测；随机优化
+        </div>
+
+      </div>
+
+    </header>
+
+
+    <!-- =========================
+         Education
+         ========================= -->
+
+    <section class="section">
+
+      <h2 class="section-title">
+        教育背景
+      </h2>
+
+
+      <div class="entry">
+
+        <div class="date">
+          2024.09 – 至今
+        </div>
+
+        <div>
+
+          <div class="entry-title">
+            北京交通大学
+          </div>
+
+          <div class="entry-subtitle">
+            交通运输学院 ｜ 交通运输 ｜ 硕士研究生
+          </div>
+
+          <div class="secondary">
+            GPA：3.36 / 4.00
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="entry">
+
+        <div class="date">
+          2020.09 – 2024.06
+        </div>
+
+        <div>
+
+          <div class="entry-title">
+            南京航空航天大学金城学院
+          </div>
+
+          <div class="entry-subtitle">
+            交通运输（民航运输工程）｜ 本科
+          </div>
+
+          <div class="secondary">
+            GPA：3.70 / 4.00
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         Research Interests
+         ========================= -->
+
+    <section class="section">
+
+      <h2 class="section-title">
+        研究兴趣与博士阶段规划
+      </h2>
+
+      <ul class="output-list">
+
+        <li>
+          <strong>研究主线：</strong>
+          模块化自动驾驶电动公交
+          （Modular Autonomous Electric Bus, MAEB）
+          系统性研究，从车辆调度与能源补给优化进一步拓展至
+          需求预测、不确定性建模与实时运营决策。
+        </li>
+
+        <li>
+          围绕 MAEB 运营优化连续开展三项研究工作，
+          形成从文献研读、问题凝练、机制设计、数学建模、
+          算法求解到论文投稿与返修的较完整科研训练。
+        </li>
+
+        <li>
+          <strong>研究兴趣：</strong>
+          公共交通系统中的需求响应、车辆调度与能源补给协同优化，
+          关注客流需求、运力供给、电池能源与车辆资源配置之间的结构性矛盾。
+        </li>
+
+        <li>
+          <strong>博士阶段希望进一步研究：</strong>
+
+          <ul class="nested-list">
+
+            <li>
+              面向真实运行数据的客流需求与交通状态预测 / 估计；
+            </li>
+
+            <li>
+              面向需求与运行环境不确定性的
+              stochastic / robust optimization；
+            </li>
+
+            <li>
+              面向实时运营的
+              prediction–optimization integration
+              与动态决策；
+            </li>
+
+            <li>
+              加强真实运营数据、交通仿真与优化算法之间的衔接，
+              提高模型在复杂交通系统中的可解释性、
+              可扩展性与实际应用价值。
+            </li>
+
+          </ul>
+
+        </li>
+
+      </ul>
+
+    </section>
+
+
+    <!-- =========================
+         Research Outputs
+         ========================= -->
+
+    <section class="section">
+
+      <h2 class="section-title">
+        研究成果（截至 2026.08）
+      </h2>
+
+      <ul class="output-list">
+
+        <li>
+          <strong>第一作者：</strong>
+          Joint optimization of charger deployment and vehicle scheduling
+          for modular autonomous electric buses under opportunity charging.
+          <em>Journal of Energy Storage</em>，
+          <strong>一审返修已提交（R1 revision submitted）</strong>。
+        </li>
+
+        <li>
+          <strong>第一作者：</strong>
+          Integrating modular autonomous electric buses into tidal urban mobility:
+          Joint scheduling optimization with detachment-return operations.
+          <em>Transportation Research Part E:
+          Logistics and Transportation Review</em>，
+          <strong>外审中（Under Review）</strong>。
+        </li>
+
+        <li>
+          <strong>第二作者（导师一作）：</strong>
+          模块化自动驾驶电动公交脱节返程调度优化。
+          《华南理工大学学报（自然科学版）》，
+          <strong>外审中</strong>。
+        </li>
+
+        <li>
+          <strong>专利：</strong>
+          围绕“模块化自动驾驶电动公交脱节返程调度方法”
+          已取得专利受理通知书。
+        </li>
+
+      </ul>
+
+    </section>
+
+
+    <!-- =========================
+         Research Experience
+         ========================= -->
+
+    <section class="section">
+
+      <h2 class="section-title">
+        科研经历
+      </h2>
+
+
+      <!-- Project 1 -->
+
+      <div class="entry">
+
+        <div class="date">
+          2024.10 – 至今
+        </div>
+
+        <div>
+
+          <div class="entry-title">
+            Joint optimization of charger deployment and vehicle scheduling
+            for modular autonomous electric buses under opportunity charging
+          </div>
+
+          <div class="secondary">
+            第一作者
+          </div>
+
+          <ul class="bullets">
+
+            <li>
+              <strong>研究问题：</strong>
+              针对模块化自动驾驶电动公交在机会充电场景下面临的
+              充电时间窗有限、车辆调度与充电资源部署高度耦合等问题，
+              构建充电桩部署与车辆调度联合优化框架。
+            </li>
+
+            <li>
+              <strong>核心思路：</strong>
+              提出解耦式机会充电机制，
+              在不影响乘客服务时间的前提下，
+              利用模块化车辆可解耦、耦合特征动态创造充电时间窗。
+            </li>
+
+            <li>
+              <strong>研究训练：</strong>
+              完成英文论文写作、数学模型构建、算法实现与实验设计，
+              并根据国际同行评审意见系统修订模型设定、
+              实验分析和论文表述；
+              当前已完成
+              <em>Journal of Energy Storage</em>
+              一审返修。
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+
+      <!-- Project 2 -->
+
+      <div class="entry">
+
+        <div class="date">
+          2025.09 – 至今
+        </div>
+
+        <div>
+
+          <div class="entry-title">
+            Integrating modular autonomous electric buses into tidal urban mobility:
+            Joint scheduling optimization with detachment-return operations
+          </div>
+
+          <div class="secondary">
+            第一作者
+          </div>
+
+          <ul class="bullets">
+
+            <li>
+              <strong>研究问题：</strong>
+              从潮汐通勤客流与车辆资源时空错配出发，
+              关注固定班次中“高峰滞留”与“局部低载”并存的运营矛盾，
+              并联合考虑基础设施配置问题。
+            </li>
+
+            <li>
+              <strong>机制创新：</strong>
+              提出 detachment-return operations（脱节返程机制），
+              使车辆模块能够在中途站点释放冗余运力，
+              并转化为对向区间返程服务，
+              实现站点级车辆资源再分配。
+            </li>
+
+            <li>
+              <strong>模型：</strong>
+              构建包含初始编组、中途脱节、返程服务、
+              后续任务衔接、基础设施配置和乘客滞留惩罚的
+              联合调度优化模型。
+            </li>
+
+            <li>
+              <strong>阶段成果：</strong>
+              形成英文论文一篇，
+              以第一作者投稿
+              <em>Transportation Research Part E:
+              Logistics and Transportation Review</em>，
+              当前外审中。
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+
+      <!-- Project 3 -->
+
+      <div class="entry">
+
+        <div class="date">
+          2026.03 – 至今
+        </div>
+
+        <div>
+
+          <div class="entry-title">
+            模块化自动驾驶电动公交脱节返程调度优化
+          </div>
+
+          <div class="secondary">
+            第二作者（导师一作）
+          </div>
+
+          <ul class="bullets">
+
+            <li>
+              面向潮汐通勤场景下固定班次供给不足与车辆低载并存的问题，
+              构建模块化自动驾驶电动公交脱节返程调度优化模型。
+            </li>
+
+            <li>
+              围绕固定班次、动态编组、中途脱节、对向返程服务、
+              模块任务衔接和乘客滞留等核心约束进行系统梳理，
+              突出其在站点级车辆资源再分配和客流—运力匹配中的应用价值。
+            </li>
+
+            <li>
+              论文《模块化自动驾驶电动公交脱节返程调度优化》
+              投稿至《华南理工大学学报（自然科学版）》，
+              当前外审中。
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+
+      <!-- Patent -->
+
+      <div class="entry">
+
+        <div class="date">
+          2026.06 – 至今
+        </div>
+
+        <div>
+
+          <div class="entry-title">
+            模块化自动驾驶电动公交脱节返程调度方法专利
+          </div>
+
+          <div class="secondary">
+            第一作者
+          </div>
+
+          <ul class="bullets">
+
+            <li>
+              将模块化自动驾驶电动公交脱节返程机制转化为专利技术方案，
+              围绕“运行中释放冗余模块—对向返程服务—后续任务衔接”
+              构建完整技术流程。
+            </li>
+
+            <li>
+              完成技术问题、现有技术不足、核心创新点、
+              应用场景以及方法流程图和调度衔接逻辑的系统梳理；
+              已取得专利受理通知书。
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         Overseas Experience
+         ========================= -->
+
+    <section class="section">
+
+      <h2 class="section-title">
+        海外访学经历
+      </h2>
+
+      <div class="entry">
+
+        <div class="date">
+          2025.03 – 2025.04
+        </div>
+
+        <div>
+
+          <div class="entry-title">
+
+            <a
+              href="https://www.oslomet.no/en/"
+              target="_blank"
+              rel="noreferrer">
+              Oslo Metropolitan University (OsloMet)
+            </a>
+
+            ｜ The COMet Project
+
+          </div>
+
+          <ul class="bullets">
+
+            <li>
+              <strong>项目背景：</strong>
+              The COMet Project，
+              由 Norwegian Directorate for Higher Education and Skills
+              (HK-dir.) 资助；
+              联系导师：
+              <a
+                href="https://www.oslomet.no/en/about/employee/chaorulu/"
+                target="_blank"
+                rel="noreferrer">
+                Chaoru Lu
+              </a>。
+            </li>
+
+            <li>
+              <strong>访学内容：</strong>
+              访学期间开展学术交流，
+              每周参加 Seminar，
+              围绕硕士阶段科研进展进行英文汇报与讨论，
+              提升国际学术沟通、研究表达和跨文化交流能力。
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         Academic Communication
+         ========================= -->
+
+    <section class="section">
+
+      <h2 class="section-title">
+        学术交流
+      </h2>
+
+      <ul class="output-list">
+
+        <li>
+          东南大学交通学院 JOIN 学术论坛：
+          “通过模块化车辆缓解公交串车”相关主题学习与交流，
+          2024.09.30；
+          该经历促成对模块化自动驾驶电动公交研究潜力的进一步关注。
+        </li>
+
+        <li>
+          2026 交通科技与产业创新发展大会（天津），
+          墙报汇报，2026.06；
+          围绕模块化自动驾驶电动公交充电调度优化研究进行展示与交流。
+        </li>
+
+      </ul>
+
+    </section>
+
+
+    <!-- =========================
+         Courses and Skills
+         ========================= -->
+
+    <section class="section">
+
+      <h2 class="section-title">
+        课程与技能
+      </h2>
+
+      <div class="course-row">
+
+        <span class="label">
+          主修课程：
+        </span>
+
+        综合交通建模、交通规划理论与方法、
+        道路交通管理与控制、深度学习、
+        模型与算法、随机方法及应用、
+        最优估计与数据融合方法、运筹学。
+
+      </div>
+
+
+      <div class="course-row">
+
+        <span class="label">
+          方法基础：
+        </span>
+
+        交通运输建模、混合整数规划、
+        启发式算法、车辆调度优化、
+        机器学习基础与随机方法基础。
+
+      </div>
+
+
+      <div class="course-row">
+
+        <span class="label">
+          编程与工具：
+        </span>
+
+        Python、MATLAB、Gurobi、Navicat。
+
+      </div>
+
+
+      <div class="course-row">
+
+        具备混合整数规划模型构建、
+        算法实现、实验数据处理与结果可视化经验。
+
+      </div>
+
+
+      <div class="course-row">
+
+        <span class="label">
+          语言能力：
+        </span>
+
+        CET-6 534；
+        IELTS 6.5 (Overall)。
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
 </body>
+
 </html>
