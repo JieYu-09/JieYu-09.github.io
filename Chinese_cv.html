@@ -295,6 +295,56 @@
       gap: 7mm;
     }
 
+
+    /* Academic CV typography: Song/serif for the name, crisp Chinese sans for headings and text. */
+    :root {
+      --cv-zh-sans: "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC",
+        "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+      --cv-zh-serif: "Noto Serif SC", "Source Han Serif SC", "Songti SC",
+        "STSong", "SimSun", serif;
+      --cv-latin-serif: "Palatino Linotype", "Palatino", Georgia, serif;
+    }
+
+    body {
+      font-family: var(--cv-zh-sans);
+      font-kerning: normal;
+      text-rendering: optimizeLegibility;
+    }
+
+    .name {
+      font-family: var(--cv-zh-serif);
+      font-weight: 600;
+      font-size: 25pt;
+      letter-spacing: 0.07em;
+      line-height: 1.15;
+    }
+
+    .section-title {
+      font-family: var(--cv-zh-sans);
+      font-size: 13.1pt;
+      font-weight: 600;
+      letter-spacing: 0.035em;
+      line-height: 1.4;
+    }
+
+    .entry-title {
+      font-weight: 600;
+      line-height: 1.48;
+    }
+
+    .personal-line,
+    .summary-grid,
+    .date,
+    .secondary {
+      font-variant-numeric: tabular-nums;
+    }
+
+    .output-list a[href^="https://doi.org/"] {
+      text-decoration: underline;
+      text-decoration-thickness: 0.65px;
+      text-underline-offset: 2px;
+    }
+
     /* =========================
        PRINT SETTINGS
        ========================= */
@@ -720,7 +770,7 @@
         <li>
           <strong>第一作者：</strong>
           <a href="https://doi.org/10.1016/j.est.2026.124698" target="_blank" rel="noopener noreferrer">Joint optimization of charger deployment and vehicle scheduling for modular autonomous electric buses under a decoupling-enabled opportunity charging strategy</a>.
-          <em><strong>Journal of Energy Storage</strong></em>，<strong>182</strong> (2026)，124698（JCR IF: 10.7）；
+          <em><strong>Journal of Energy Storage</strong></em>，<strong>182</strong> (2026)，124698（2025 JCR Q1；IF: 10.7）；
           <strong>已发表</strong>。<a href="https://doi.org/10.1016/j.est.2026.124698" target="_blank" rel="noopener noreferrer">DOI: 10.1016/j.est.2026.124698</a>。
         </li>
 
@@ -729,7 +779,7 @@
           Integrating modular autonomous electric buses into tidal urban mobility:
           Joint scheduling optimization with detachment-return operations.
           <em><strong>Transportation Research Part E:
-          Logistics and Transportation Review (JCR IF: 9.3)</strong></em>，
+          Logistics and Transportation Review</strong></em>（2025 JCR Q1；IF: 9.3），
           <strong>返修中（Revision invited）</strong>。
         </li>
 
