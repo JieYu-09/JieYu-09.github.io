@@ -302,17 +302,17 @@
         "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
       --cv-zh-serif: "Noto Serif SC", "Source Han Serif SC", "Songti SC",
         "STSong", "SimSun", serif;
-      --cv-latin-serif: "Palatino Linotype", "Palatino", Georgia, serif;
+      --cv-latin: "Times New Roman", Times;
     }
 
     body {
-      font-family: var(--cv-zh-sans);
+      font-family: var(--cv-latin), var(--cv-zh-sans);
       font-kerning: normal;
       text-rendering: optimizeLegibility;
     }
 
     .name {
-      font-family: var(--cv-zh-serif);
+      font-family: var(--cv-latin), var(--cv-zh-serif);
       font-weight: 600;
       font-size: 25pt;
       letter-spacing: 0.07em;
@@ -320,7 +320,7 @@
     }
 
     .section-title {
-      font-family: var(--cv-zh-sans);
+      font-family: var(--cv-latin), var(--cv-zh-sans);
       font-size: 13.1pt;
       font-weight: 600;
       letter-spacing: 0.035em;
