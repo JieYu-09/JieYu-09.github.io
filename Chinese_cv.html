@@ -295,6 +295,15 @@
       gap: 7mm;
     }
 
+    .research-directions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 12mm;
+      row-gap: 1.5mm;
+      margin: 0;
+      padding-left: 5mm;
+    }
+
 
     /* Academic CV typography: Song/serif for the name, crisp Chinese sans for headings and text. */
     :root {
@@ -621,12 +630,6 @@
           副教授
         </div>
 
-        <div>
-          <strong>研究方向：</strong>
-          智能交通系统；数据驱动的交通需求预测；
-          动态决策与随机优化
-        </div>
-
       </div>
 
     </header>
@@ -705,7 +708,7 @@
         研究方向
       </h2>
 
-      <ul class="output-list">
+      <ul class="research-directions">
         <li>智能交通系统</li>
         <li>数据驱动的交通需求预测</li>
         <li>动态决策与随机优化</li>
