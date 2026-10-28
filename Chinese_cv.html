@@ -112,8 +112,22 @@
        ========================= */
 
     .header {
+      position: relative;
+      padding-right: 31mm;
       padding-bottom: 6mm;
       border-bottom: 1.2px solid #bfc7ce;
+    }
+
+    .cv-photo {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 25mm;
+      height: 33mm;
+      object-fit: cover;
+      object-position: center top;
+      border: 1px solid #d5dbe0;
+      background: #ffffff;
     }
 
     .name-row {
@@ -519,6 +533,18 @@
         text-align: left;
       }
 
+      .header {
+        padding-right: 0;
+      }
+
+      .cv-photo {
+        position: static;
+        display: block;
+        width: 25mm;
+        height: 33mm;
+        margin: 0 0 8px auto;
+      }
+
       .entry {
         grid-template-columns: 1fr;
         gap: 2px;
@@ -577,6 +603,8 @@
          ========================= -->
 
     <header class="header">
+
+      <img class="cv-photo" src="asset/profile.png" alt="虞捷照片">
 
       <div class="name-row">
         <h1 class="name">虞捷</h1>
